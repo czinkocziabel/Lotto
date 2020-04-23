@@ -10,7 +10,7 @@ public class Lotto extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("LottoView.fxml"));
 
         Scene scene = new Scene(root);
 
