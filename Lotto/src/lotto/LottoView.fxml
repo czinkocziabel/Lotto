@@ -9,7 +9,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lotto.ViewController">
     <children>
-        <Button fx:id="button" layoutX="128.0" layoutY="161.0" text="Sorsolás" />
+        <Button fx:id="button" layoutX="128.0" layoutY="161.0" onAction="#handleButtonAction" text="Sorsolás" />
         <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="124.0" layoutY="1.0" minHeight="16" minWidth="69" text="LOTTÓ" textAlignment="CENTER" wrapText="true">
             <font>
                 <Font size="18.0" />
