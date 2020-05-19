@@ -18,7 +18,9 @@ public class ViewController implements Initializable {
     private final int MAX = 99;
     private final int MIN = 1;
 
-    private int num1, num2, num3, num4, num5;
+    private int genNum1, genNum2, genNum3, genNum4, genNum5;
+
+    private int selNum1, selNum2, selNum3, selNum4, selNum5;
 
     @FXML
     private Label label1, label2, label3, label4, label5;
@@ -28,27 +30,39 @@ public class ViewController implements Initializable {
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        num1 = 0;
-        num2 = 0;
-        num3 = 0;
-        num4 = 0;
-        num5 = 0;
-        num1 = getRandomNumber();
-        num2 = getRandomNumber();
-        num3 = getRandomNumber();
-        num4 = getRandomNumber();
-        num5 = getRandomNumber();
-        label1.setText(String.valueOf(num1));
-        label2.setText(String.valueOf(num2));
-        label3.setText(String.valueOf(num3));
-        label4.setText(String.valueOf(num4));
-        label5.setText(String.valueOf(num5));
+        
+        //We are gathernig the numbers.
+        /*selNum1 = Integer.parseInt(input1.getText());
+        selNum2 = Integer.parseInt(input2.getText());
+        selNum3 = Integer.parseInt(input3.getText());
+        selNum4 = Integer.parseInt(input4.getText());
+        selNum5 = Integer.parseInt(input5.getText());
+        */
+
+        //We are generating numbers.
+        genNum1 = 0;
+        genNum2 = 0;
+        genNum3 = 0;
+        genNum4 = 0;
+        genNum5 = 0;
+        genNum1 = getRandomNumber();
+        genNum2 = getRandomNumber();
+        genNum3 = getRandomNumber();
+        genNum4 = getRandomNumber();
+        genNum5 = getRandomNumber();
+
+        //We are setting the generated numbers to the labels.
+        label1.setText(String.valueOf(genNum1));
+        label2.setText(String.valueOf(genNum2));
+        label3.setText(String.valueOf(genNum3));
+        label4.setText(String.valueOf(genNum4));
+        label5.setText(String.valueOf(genNum5));
     }
 
     private int getRandomNumber() {
 
         int random = (int) (Math.random() * MAX) + MIN;
-        if (random == num1 || random == num2 || random == num3 || random == num4 || random == num5) {
+        if (random == genNum1 || random == genNum2 || random == genNum3 || random == genNum4 || random == genNum5) {
             return getRandomNumber();
         }
 
