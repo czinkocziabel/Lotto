@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 
 public class ViewController implements Initializable {
 
@@ -23,7 +24,10 @@ public class ViewController implements Initializable {
     private int selNum1, selNum2, selNum3, selNum4, selNum5;
 
     @FXML
-    private Label label1, label2, label3, label4, label5, result;
+    private Pane basePane, alertPane;
+
+    @FXML
+    private Label label1, label2, label3, label4, label5, result, alertText;
 
     @FXML
     private TextField input1, input2, input3, input4, input5;
@@ -63,7 +67,10 @@ public class ViewController implements Initializable {
             selNum4 = Integer.parseInt(input4.getText());
             selNum5 = Integer.parseInt(input5.getText());
         } catch (Exception e) {
-
+            basePane.setDisable(false);
+            basePane.setOpacity(0.3);
+            alertPane.setVisible(true);
+            alertText.setText("Nem jó számot adtál meg.");
         }
         return "";
     }
