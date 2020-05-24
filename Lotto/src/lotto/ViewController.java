@@ -23,21 +23,13 @@ public class ViewController implements Initializable {
     private int selNum1, selNum2, selNum3, selNum4, selNum5;
 
     @FXML
-    private Label label1, label2, label3, label4, label5;
+    private Label label1, label2, label3, label4, label5, result;
 
     @FXML
     private TextField input1, input2, input3, input4, input5;
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        
-        //We are gathernig the numbers.
-        /*selNum1 = Integer.parseInt(input1.getText());
-        selNum2 = Integer.parseInt(input2.getText());
-        selNum3 = Integer.parseInt(input3.getText());
-        selNum4 = Integer.parseInt(input4.getText());
-        selNum5 = Integer.parseInt(input5.getText());
-        */
 
         //We are generating numbers.
         genNum1 = 0;
@@ -57,6 +49,23 @@ public class ViewController implements Initializable {
         label3.setText(String.valueOf(genNum3));
         label4.setText(String.valueOf(genNum4));
         label5.setText(String.valueOf(genNum5));
+
+        calculate();
+
+    }
+
+    private String calculate() {
+        try {
+            //We are gathernig the numbers.
+            selNum1 = Integer.parseInt(input1.getText());
+            selNum2 = Integer.parseInt(input2.getText());
+            selNum3 = Integer.parseInt(input3.getText());
+            selNum4 = Integer.parseInt(input4.getText());
+            selNum5 = Integer.parseInt(input5.getText());
+        } catch (Exception e) {
+
+        }
+        return "";
     }
 
     private int getRandomNumber() {
