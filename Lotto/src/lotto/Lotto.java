@@ -15,6 +15,8 @@ public class Lotto extends Application {
         Scene scene = new Scene(root);
 
         stage.setScene(scene);
+        stage.setMaxWidth(405);
+        stage.setMaxHeight(330);
         stage.setResizable(false);
         stage.setTitle("Lotto");
         stage.show();
